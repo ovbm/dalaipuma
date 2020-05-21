@@ -40,8 +40,18 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          property: `og:type`,
-          content: `website`,
+          property: 'og:image',
+          name: 'image',
+          content:
+            previewImageURL || 'https://dalaipuma.band/social.png',
+        },
+        {
+          property: 'og:type',
+          content: 'website',
+        },
+        {
+          property: 'og:url',
+          content: url || 'https://www.dalaipuma.band',
         },
         {
           name: `twitter:card`,
@@ -58,6 +68,11 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: 'twitter:image',
+          content:
+            previewImageURL || 'https://dalaipuma.band/social.png',
         },
       ].concat(meta)}
     />
