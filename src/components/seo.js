@@ -42,8 +42,7 @@ function SEO({ description, lang, meta, title }) {
         {
           property: 'og:image',
           name: 'image',
-          content:
-            previewImageURL || 'https://dalaipuma.band/social.png',
+          content: 'https://dalaipuma.band/social.png',
         },
         {
           property: 'og:type',
@@ -51,7 +50,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: 'og:url',
-          content: url || 'https://www.dalaipuma.band',
+          content: 'https://www.dalaipuma.band',
         },
         {
           name: `twitter:card`,
@@ -71,8 +70,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'twitter:image',
-          content:
-            previewImageURL || 'https://dalaipuma.band/social.png',
+          content: 'https://dalaipuma.band/social.png',
         },
       ].concat(meta)}
     />
