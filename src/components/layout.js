@@ -1,51 +1,62 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react';
+import styled from 'styled-components';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
+import dalaiGIF from '../images/dalai.gif';
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
+  const { background1 } = useStaticQuery(
+    graphql`
+      query {
+        background1: file(relativePath: { eq: "dalai.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 400, quality: 70) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
         }
       }
-    }
-  `)
-
+    `,
+  );
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+      <Image fluid={background1.childImageSharp.fluid} />
+      <Gif src={dalaiGIF} alt="Otter dancing with a fish" />
+      <div>
+        <main
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            margin: `0 auto`,
+            maxWidth: 960,
+            alignItems: 'center',
+            padding: '2em 0 4em 0',
+          }}
+        >
+          {children}
+        </main>
       </div>
     </>
-  )
-}
+  );
+};
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+const Gif = styled.img`
+  position: fixed !important;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+`;
 
-export default Layout
+const Image = styled(Img)`
+  position: fixed !important;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+`;
+
+export default Layout;
