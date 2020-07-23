@@ -19,6 +19,21 @@ const IndexPage = () => (
         width: '300px',
         height: '442px',
       }}
+      src="https://bandcamp.com/EmbeddedPlayer/track=588048221/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+      seamless
+    >
+      <a href="http://dalaipuma.bandcamp.com/track/cigarette-day">
+        Cigarette Day by Dalai Puma
+      </a>
+    </iframe>
+    <iframe
+      style={{
+        alignSelf: 'center',
+        margin: '2em 0',
+        border: 0,
+        width: '300px',
+        height: '442px',
+      }}
       src="https://bandcamp.com/EmbeddedPlayer/track=2909376046/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
       seamless
     >
