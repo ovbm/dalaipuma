@@ -13,6 +13,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+          endpoint: 'https://band.us18.list-manage.com/subscribe/post?u=2abfeaaabd3d0205adb46d2de&amp;id=be683207e5',
+          timeout: 3500,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-favicon',
       options: {
         logo: './src/images/favicon.png',
