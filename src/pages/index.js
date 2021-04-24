@@ -19,6 +19,21 @@ const IndexPage = () => (
         width: '300px',
         height: '442px',
       }}
+      src="https://bandcamp.com/EmbeddedPlayer/track=2158678826/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+      seamless
+    >
+      <a href="https://dalaipuma.bandcamp.com/track/my-bedroom-is-an-entire-town">
+        My Bedroom is an Entire Town by Dalai Puma
+      </a>
+    </iframe>
+    <iframe
+      style={{
+        alignSelf: 'center',
+        margin: '2em 0',
+        border: 0,
+        width: '300px',
+        height: '442px',
+      }}
       src="https://bandcamp.com/EmbeddedPlayer/track=588048221/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
       seamless
     >
