@@ -11,6 +11,23 @@ const IndexPage = () => (
     <h1 style={{ fontSize: '2.8em', color: 'white', fontWeight: 'bold' }}>
       DALAI PUMA
     </h1>
+    <p>Rhabarber Pop, Barbershop Hop, Indie wRap, Rock Lobster. Raaaa!</p>
+    <SocialLinks />
+    <iframe
+      style={{
+        alignSelf: 'center',
+        margin: '2em 0',
+        border: 0,
+        width: '300px',
+        height: '442px',
+      }}
+      src="https://bandcamp.com/EmbeddedPlayer/track=197760067/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+      seamless
+    >
+      <a href="https://dalaipuma.bandcamp.com/track/you-dont-know-how-to-kiss">
+        You don&#39;t know how to Kiss by Dalai Puma
+      </a>
+    </iframe>
     <iframe
       style={{
         alignSelf: 'center',
@@ -72,7 +89,6 @@ const IndexPage = () => (
       </a>
     </iframe>
     <Newsletter />
-    <SocialLinks />
   </Layout>
 );
 
