@@ -11,9 +11,14 @@ const IndexPage = () => (
     <h1 style={{ fontSize: '2.8em', color: 'white', fontWeight: 'bold' }}>
       DALAI PUMA
     </h1>
-    <p>Rhabarber Pop, Barbershop Hop, Indie wRap, Rock Lobster. Raaaa!</p>
     <SocialLinks />
+    <p style={{ color: 'white', fontWeight: 'bold' }}>
+      Rhabarber Pop, Barbershop Hop, Indie wRap, Rock Lobster. Raaaa!
+    </p>
+    <Newsletter />
+
     <iframe
+      loading="lazy"
       style={{
         alignSelf: 'center',
         margin: '2em 0',
@@ -29,6 +34,7 @@ const IndexPage = () => (
       </a>
     </iframe>
     <iframe
+      loading="lazy"
       style={{
         alignSelf: 'center',
         margin: '2em 0',
@@ -44,6 +50,7 @@ const IndexPage = () => (
       </a>
     </iframe>
     <iframe
+      loading="lazy"
       style={{
         alignSelf: 'center',
         margin: '2em 0',
@@ -59,6 +66,7 @@ const IndexPage = () => (
       </a>
     </iframe>
     <iframe
+      loading="lazy"
       style={{
         alignSelf: 'center',
         margin: '2em 0',
@@ -74,6 +82,7 @@ const IndexPage = () => (
       </a>
     </iframe>
     <iframe
+      loading="lazy"
       style={{
         alignSelf: 'center',
         margin: '2em 0',
@@ -88,7 +97,6 @@ const IndexPage = () => (
         Leave Your Tribe by Dalai Puma
       </a>
     </iframe>
-    <Newsletter />
   </Layout>
 );
 

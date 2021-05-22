@@ -19,12 +19,6 @@ module.exports = {
           timeout: 3500,
       },
     },
-    {
-      resolve: 'gatsby-plugin-favicon',
-      options: {
-        logo: './src/images/favicon.png',
-      },
-    },
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
