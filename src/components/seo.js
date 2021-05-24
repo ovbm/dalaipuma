@@ -1,87 +1,26 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import Head from 'next/head';
+import config from '../config';
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
-        }
-      }
-    `
-  )
-
-  const metaDescription = description || site.siteMetadata.description
+function SEO({ description, meta, title }) {
+  const siteTitle = config.title;
+  const siteDescription = config.description
 
   return (
-    <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
-      link={[{rel: 'icon', type: 'image/png', href: 'favicon.png'}]}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: 'og:image',
-          name: 'image',
-          content: 'https://dalaipuma.band/social.png',
-        },
-        {
-          property: 'og:type',
-          content: 'website',
-        },
-        {
-          property: 'og:url',
-          content: 'https://www.dalaipuma.band',
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        {
-          name: 'twitter:image',
-          content: 'https://dalaipuma.band/social.png',
-        },
-      ].concat(meta)}
-    />
-  )
+    <Head>
+      <title>{`${title} | ${siteTitle}`}</title>
+      <meta name="description" content={siteDescription} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={siteTitle} />
+      <meta property="og:description" content={siteDescription} />
+      <meta property="og:site_name" content={siteTitle} />
+      <meta property="twitter:card" content="summary" />
+      <meta property="twitter:creator" content={config.social.instagram} />
+      <meta property="twitter:title" content={siteTitle} />
+      <meta property="twitter:description" content={siteDescription} />
+      <link rel="icon" type="image/png" href="/favicon.png" />
+    </Head>
+  );
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-export default SEO
+export default SEO;

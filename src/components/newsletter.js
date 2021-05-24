@@ -1,16 +1,41 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
-import addToMailchimp from 'gatsby-plugin-mailchimp';
+import jsonp from 'jsonp';
+import { validate } from 'email-validator';
+
+const endpoint = "https://band.us18.list-manage.com/subscribe/post-json?u=2abfeaaabd3d0205adb46d2de&amp;id=be683207e5"; // eslint-disable-line no-undef
+const timeout = 3500;
+
+const addToMailchimp = function addToMailchimp(email) {
+  const isEmailValid = validate(email)
+  const emailEncoded = encodeURIComponent(email) 
+  if (!isEmailValid) {
+      return Promise.resolve({
+          result: 'error',
+          msg: 'The email you entered is not valid.',
+      });
+  }
+
+  // Generates MC endpoint for our jsonp request. We have to
+  // change `/post` to `/post-json` otherwise, MC returns an error
+  const queryParams = `&EMAIL=${emailEncoded}`;
+  const url = `${endpoint}${queryParams}`;
+
+  return new Promise((resolve, reject) =>
+    jsonp(url, { param: 'c', timeout }, (err, data) => {
+        if (err) reject(err);
+        if (data) resolve(data);
+    }),
+  );
+};
 
 export default function newsletter() {
   const [result, setResult] = useState({ result: '', msg: '' });
   const [email, setEmail] = useState('');
-  console.log(email);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await addToMailchimp(email);
     setResult(res);
-    console.log(res);
   };
 
   return (
@@ -18,8 +43,9 @@ export default function newsletter() {
       style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
     >
       <form onSubmit={handleSubmit}>
-        <Label>Newsletter</Label>
-        <EmailInput
+        <label>Newsletter {' '}
+        <input
+          className="email"
           type="email"
           name="email"
           value={email}
@@ -27,6 +53,7 @@ export default function newsletter() {
           placeholder="email"
           required
         />
+        </label>
         <button type="submit">Submit</button>
       </form>
       {result.result !== '' ? (
@@ -34,31 +61,35 @@ export default function newsletter() {
           {result.result === 'success' ? (
             <p style={{ color: 'white', fontWeight: 'bold' }}>♥️ thanks! ♥️</p>
           ) : (
-            <ErrorMessage dangerouslySetInnerHTML={{ __html: result.msg }} />
+            <div className="error" dangerouslySetInnerHTML={{ __html: result.msg }} />
           )}
         </>
       ) : null}
+    
+      <style jsx>
+        {`
+          .emailInput {
+            background: 'transparent';
+            color: 'white';
+            margin-bottom: '1em';
+          }
+          .emailInput:focus {
+            outline: none;
+          }
+          label {
+            color: white;
+            font-weight: bold;
+          }
+          .error {
+            text-align: center;
+            margin: 1em 0;
+            width: 300px;
+            color: white;
+          }
+        `}
+      </style>
     </div>
   );
 }
 
-const EmailInput = styled.input`
-  background: 'transparent';
-  color: 'white';
-  margin-bottom: '1em';
-  &:focus {
-    outline: none;
-  }
-`;
 
-const Label = styled.label`
-  color: white;
-  font-weight: bold;
-`;
-
-const ErrorMessage = styled.div`
-  text-align: center;
-  margin: 1em 0;
-  width: 300px;
-  color: white;
-`;
