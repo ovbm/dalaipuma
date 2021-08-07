@@ -16,6 +16,12 @@ const IndexPage = () => (
       Rhabarber Pop, Barbershop Hop, Indie wRap, Rock Lobster. Raaaa!
     </p>
     <Newsletter />
+    <iframe
+      title="Your Kink Is Not My Kink But Your Kink Is Ok by Dalai Puma"
+      loading="lazy"
+      src="https://bandcamp.com/EmbeddedPlayer/track=1578663658/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+      seamless
+    />
 
     <iframe
       title="You don&#39;t know how to Kiss by Dalai Puma"

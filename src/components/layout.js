@@ -1,24 +1,19 @@
 import React from 'react';
-import Image from 'next/image';
 
 const Layout = ({ children }) => (
   <>
-    <div className="bgImage">
-      <Image
-        objectFit="cover"
+    <div className="bg">
+      <img
         src="/dalai.jpg"
         alt="Dalai Puma Background"
-        layout="fill"
-        quality={75}
+        className="bg"
       />
     </div>
-    <div className="bgImage gif">
-      <Image
-        objectFit="cover"
+    <div className="bg gif">
+      <img
         src="/dalai.webp"
         alt="Dalai Puma Background Gif"
-        layout="fill"
-        quality={75}
+        className="bg"
       />
     </div>
     <div>
@@ -37,13 +32,18 @@ const Layout = ({ children }) => (
     </div>
     <style jsx>
       {`
-        .bgImage {
+        .bg {
           position: fixed;
           right: 0;
           bottom: 0;
           min-width: 100%;
           min-height: 100%;
           z-index: -2;
+        }
+        .image {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
         }
         .gif {
           z-index: -1;
