@@ -1,10 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import config from '../config';
 
 function SEO({ description, meta, title }) {
   const siteTitle = config.title;
-  const siteDescription = config.description
+  const siteDescription = config.description;
+  const router = useRouter();
 
   return (
     <Head>
@@ -19,6 +21,13 @@ function SEO({ description, meta, title }) {
       <meta property="twitter:title" content={siteTitle} />
       <meta property="twitter:description" content={siteDescription} />
       <link rel="icon" type="image/png" href="/favicon.png" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+      {router.asPath === '/shows' && (
+        <script src="//widget.songkick.com/10131488/widget.js" />
+      )}
     </Head>
   );
 }

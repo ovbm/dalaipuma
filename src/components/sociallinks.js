@@ -5,8 +5,8 @@ export default function Sociallink({ between }) {
     <div between={between}>
       <a href="https://www.instagram.com/dalai_puma/" aria-label="stagram link">
         <svg
-          stroke="white"
-          fill="white"
+          stroke="currentColor"
+          fill="currentColor"
           strokeWidth="0"
           viewBox="0 0 1024 1024"
           height="36px"

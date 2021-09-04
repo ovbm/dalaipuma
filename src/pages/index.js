@@ -1,18 +1,16 @@
 import React from 'react';
 
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import SEO from '../components/seo';
-import SocialLinks from '../components/sociallinks';
-import Newsletter from '../components/newsletter';
+import Newsletter from '../components/Newsletter';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1 style={{ fontSize: '2.8em', color: 'white', fontWeight: 'bold' }}>
+    <h1>
       DALAI PUMA
     </h1>
-    <SocialLinks />
-    <p style={{ color: 'white', fontWeight: 'bold' }}>
+    <p className="music">
       Rhabarber Pop, Barbershop Hop, Indie wRap, Rock Lobster. Raaaa!
     </p>
     <Newsletter />
@@ -60,6 +58,17 @@ const IndexPage = () => (
         border: 0;
         width: 300px;
         height: 442px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 2em;
+      }
+      .music {
+        text-align: center;
+        font-size: 1.5em;
+        @media screen and (max-width: 700px) {
+          font-size: 1em;
+        }
       }
     `}</style>
   </Layout>
