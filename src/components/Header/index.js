@@ -6,7 +6,7 @@ import {
 } from 'body-scroll-lock';
 
 import Link from 'next/link';
-import SocialLinks from '../Sociallinks';
+import SocialLinks from '../Sociallinks.js';
 import MenuIcon from './MenuIcon';
 import MobileMenu from './MobileMenu';
 
