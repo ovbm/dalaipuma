@@ -45,10 +45,7 @@ const Layout = ({ children }) => {
             margin: 0 auto;
             max-width: 960px;
             align-items: center;
-            padding: ${headerHeight}px 0 4em 0;
-            @media screen and (max-width: 700px) {
-              padding: ${headerHeight}px 15px 4em 15px;
-            }
+            padding: ${headerHeight}px 15px 4em 15px;
           }
         `}
       </style>
