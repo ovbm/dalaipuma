@@ -16,6 +16,7 @@ function SEO({ description, meta, title }) {
       <meta property="og:title" content={siteTitle} />
       <meta property="og:description" content={siteDescription} />
       <meta property="og:site_name" content={siteTitle} />
+      <meta property="og:image" content="https://www.dalaipuma.band/social.png" />
       <meta property="twitter:card" content="summary" />
       <meta property="twitter:creator" content={config.social.instagram} />
       <meta property="twitter:title" content={siteTitle} />
