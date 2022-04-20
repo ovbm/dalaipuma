@@ -24,16 +24,20 @@ const IndexPage = () => (
         allowFullScreen
       />
     </div>
-    <iframe
-      style={{ border: 0, width: 700, height: 820, marginBottom: 24 }}
-      src="https://bandcamp.com/EmbeddedPlayer/album=3754664760/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
-      seamless
-    >
-      <a href="https://dalaipuma.bandcamp.com/album/ok-ciao-kakao">
-        Ok Ciao Kakao by Dalai Puma
-      </a>
-    </iframe>
     <div className="bandcampGrid">
+      <div className="flexItem">
+        <div className="bandcampContainer">
+          <iframe
+            className="bandcamp"
+            width="300"
+            height="442"
+            title="Ok Ciao Kakao"
+            loading="lazy"
+            src="https://bandcamp.com/EmbeddedPlayer/album=3754664760/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
+            seamless
+          />
+        </div>
+      </div>
       <div className="flexItem">
         <div className="bandcampContainer">
           <iframe
@@ -112,6 +116,8 @@ const IndexPage = () => (
           />
         </div>
       </div>
+      <div className="flexItem"></div>
+      <div className="flexItem"></div>
     </div>
     <style jsx>{`
       .flexItem {
@@ -124,16 +130,17 @@ const IndexPage = () => (
         min-width: 300px;
         padding-top: 131%; /* Aspect Ratio */
         margin: 0;
-        iframe {
-          border: 0;
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          width: 100%;
-          height: 100%;
-        }
+      }
+
+      .bandcampContainer iframe {
+        border: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
       }
 
       .bandcampGrid {
