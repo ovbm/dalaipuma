@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import Image from 'next/image';
 import Header from '../Header';
 
 const Layout = ({ children }) => {
@@ -8,10 +9,13 @@ const Layout = ({ children }) => {
   return (
     <>
       <div className="bg">
-        <img src="/dalai.jpg" alt="Dalai Puma Background" className="bg" />
-      </div>
-      <div className="bg gif">
-        <img src="/dalai.webp" alt="Dalai Puma Background Gif" className="bg" />
+        <Image
+          src="/cheeta.png"
+          layout="fill"
+          objectFit="cover"
+          alt="Dalai Puma Background"
+          className="bg"
+        />
       </div>
       <Header
         headerHeight={headerHeight}
@@ -30,11 +34,6 @@ const Layout = ({ children }) => {
             min-width: 100%;
             min-height: 100%;
             z-index: -2;
-          }
-          .image {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
           }
           .gif {
             z-index: -1;

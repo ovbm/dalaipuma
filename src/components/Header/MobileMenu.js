@@ -2,6 +2,7 @@ import React, { forwardRef } from 'react';
 import { useRouter } from 'next/router';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 const MobileMenu = forwardRef(({ headerHeight, isMenuOpen }, ref) => {
   const router = useRouter();
@@ -9,7 +10,15 @@ const MobileMenu = forwardRef(({ headerHeight, isMenuOpen }, ref) => {
 
   return (
     <div className="mobile-menu" ref={ref}>
-      <div className="mobile-menu-bg" />
+      <div className="mobile-menu-bg">
+        <Image
+          src="/cheeta.png"
+          layout="fill"
+          objectFit="cover"
+          alt="Dalai Puma Background"
+          className="bg"
+        />
+      </div>
       <div className="mobile-menu-content">
         <Link href="/">
           <a
@@ -20,9 +29,7 @@ const MobileMenu = forwardRef(({ headerHeight, isMenuOpen }, ref) => {
             Home
           </a>
         </Link>
-        <Link
-          href="/shows"
-        >
+        <Link href="/shows">
           <a
             style={{
               textDecoration: router.asPath === '/shows' ? 'underline' : 'none',
@@ -54,7 +61,6 @@ const MobileMenu = forwardRef(({ headerHeight, isMenuOpen }, ref) => {
           }
         }
         .mobile-menu-bg {
-          background: center / cover no-repeat url('/dalai.webp');
           position: absolute;
           top: 0;
           right: 0;

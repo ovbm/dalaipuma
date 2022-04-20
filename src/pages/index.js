@@ -16,6 +16,7 @@ const IndexPage = () => (
       <iframe
         width="560"
         height="315"
+        loading="lazy"
         src="https://www.youtube-nocookie.com/embed/CA9m5_kJVLc"
         title="YouTube video player"
         frameBorder="0"
@@ -23,6 +24,15 @@ const IndexPage = () => (
         allowFullScreen
       />
     </div>
+    <iframe
+      style={{ border: 0, width: 700, height: 820, marginBottom: 24 }}
+      src="https://bandcamp.com/EmbeddedPlayer/album=3754664760/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
+      seamless
+    >
+      <a href="https://dalaipuma.bandcamp.com/album/ok-ciao-kakao">
+        Ok Ciao Kakao by Dalai Puma
+      </a>
+    </iframe>
     <div className="bandcampGrid">
       <div className="flexItem">
         <div className="bandcampContainer">
@@ -104,13 +114,6 @@ const IndexPage = () => (
       </div>
     </div>
     <style jsx>{`
-       {
-        /* .bandcamp {
-        border: 0;
-        min-width: 300px;
-        height: 442px;
-      } */
-      }
       .flexItem {
         flex: 1;
       }
@@ -145,9 +148,12 @@ const IndexPage = () => (
       }
       .music {
         text-align: center;
-        font-size: 1.5em;
-        @media screen and (max-width: 700px) {
-          font-size: 1em;
+        font-size: 1.75em;
+        font-weight: bold;
+      }
+      @media screen and (max-width: 700px) {
+        .music {
+          font-size: 1.5em;
         }
       }
       .videContainer {
