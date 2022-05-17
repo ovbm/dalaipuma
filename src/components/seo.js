@@ -7,7 +7,7 @@ function SEO({ description, meta, title }) {
   const siteTitle = config.title;
   const siteDescription = config.description;
   const router = useRouter();
-
+  
   return (
     <Head>
       <title>{`${title} | ${siteTitle}`}</title>
@@ -26,9 +26,6 @@ function SEO({ description, meta, title }) {
         href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap"
         rel="stylesheet"
       />
-      {router.asPath === '/shows' && (
-        <script src="//widget.songkick.com/10131488/widget.js" />
-      )}
     </Head>
   );
 }
