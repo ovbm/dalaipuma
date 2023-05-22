@@ -38,7 +38,6 @@
     "build": "next build && next export",
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "deploy": "next build && next export && gh-pages --dotfiles -d out"
   },
   "repository": {
     "type": "git",
