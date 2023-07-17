@@ -39,15 +39,14 @@ const Header = forwardRef(({ headerHeight, setHeaderHeight }, headerRef) => {
     <header>
       <div className="content" ref={headerRef}>
         <nav>
-          <Link href="/">
-            <a style={{ marginRight: 24 }}>Home</a>
+          <Link href="/" style={{ marginRight: 24 }}>
+            Home
           </Link>
-
-          <Link href="/shows">
-            <a style={{ marginRight: 24 }}>Shows</a>
+          <Link href="/shows" style={{ marginRight: 24 }}>
+            Shows
           </Link>
-          <Link href="/ashtray">
-            <a>Ashtray</a>
+          <Link href="/ashtray" style={{ marginRight: 24 }}>
+            Ashtrays
           </Link>
         </nav>
         <SocialLinks />
@@ -97,7 +96,7 @@ const Header = forwardRef(({ headerHeight, setHeaderHeight }, headerRef) => {
             display: block;
           }
         }
-        .menubutton:hover  {
+        .menubutton:hover {
           color: magenta;
         }
       `}</style>

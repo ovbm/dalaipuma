@@ -5,77 +5,78 @@ import Image from 'next/image';
 import { register } from 'swiper/element/bundle';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import ashtrayGroupPic from '../../public/ashtray/group.jpg';
+import leobaerPic1 from '../../public/ashtray/leobaer-1.jpg';
+import leobaerPic2 from '../../public/ashtray/leobaer-2.jpg';
+import leobaerPic3 from '../../public/ashtray/leobaer-3.jpg';
+import guerkliPic1 from '../../public/ashtray/guerkli-1.jpg';
+import guerkliPic2 from '../../public/ashtray/guerkli-2.jpg';
+import guerkliPic3 from '../../public/ashtray/guerkli-3.jpg';
+import ssschlangePic1 from '../../public/ashtray/ssschlange-1.jpg';
+import ssschlangePic2 from '../../public/ashtray/ssschlange-2.jpg';
+import zebraPic1 from '../../public/ashtray/zebra-1.jpg';
+import zebraPic2 from '../../public/ashtray/zebra-2.jpg';
+import zebraPic3 from '../../public/ashtray/zebra-3.jpg';
+import swimmingpoolPic1 from '../../public/ashtray/swimmingpool-1.jpg';
+import swimmingpoolPic2 from '../../public/ashtray/swimmingpool-2.jpg';
+import badewannePic1 from '../../public/ashtray/badewanne-1.jpg';
+import badewannePic2 from '../../public/ashtray/badewanne-2.jpg';
+import badewannePic3 from '../../public/ashtray/badewanne-3.jpg';
+import wellesittichPic1 from '../../public/ashtray/wellesittich-1.jpg';
+import wellesittichPic2 from '../../public/ashtray/wellesittich-2.jpg';
+import wellesittichPic3 from '../../public/ashtray/wellesittich-3.jpg';
+import echsenwolfPic1 from '../../public/ashtray/echsenwolf-1.jpg';
+import echsenwolfPic2 from '../../public/ashtray/echsenwolf-2.jpg';
+import erdbeeriPic1 from '../../public/ashtray/erdbeeri-1.jpg';
+import erdbeeriPic2 from '../../public/ashtray/erdbeeri-2.jpg';
+import erdbeeriPic3 from '../../public/ashtray/erdbeeri-3.jpg';
 
 register();
 
 const ashtrayData = [
   {
     name: 'Dalai Puma Ashtrays - Leobär',
-    images: [
-      '/ashtray/leobaer-1.jpg',
-      '/ashtray/leobaer-2.jpg',
-      '/ashtray/leobaer-3.jpg',
-    ],
+    images: [leobaerPic1, leobaerPic2, leobaerPic3],
     text: 'Leobär 320.- SOLD',
   },
   {
     name: 'Dalai Puma Ashtrays - Gürkli',
-    images: [
-      '/ashtray/guerkli-1.jpg',
-      '/ashtray/guerkli-2.jpg',
-      '/ashtray/guerkli-3.jpg',
-    ],
+    images: [guerkliPic1, guerkliPic2, guerkliPic3],
     text: 'Gürkli 190.-',
   },
   {
     name: 'Dalai Puma Ashtrays - Ssschlange',
-    images: ['/ashtray/ssschlange-1.jpg', '/ashtray/ssschlange-2.jpg'],
+    images: [ssschlangePic1, ssschlangePic2],
     text: 'Ssschlange 250.-',
   },
   {
     name: 'Dalai Puma Ashtrays - Zebra',
-    images: [
-      '/ashtray/zebra-1.jpg',
-      '/ashtray/zebra-2.jpg',
-      '/ashtray/zebra-3.jpg',
-    ],
+    images: [zebraPic1, zebraPic2, zebraPic3],
     text: 'Zebra 220.- SOLD',
   },
   {
     name: 'Dalai Puma Ashtrays - Swimmingpool',
-    images: ['/ashtray/swimmingpool-1.jpg', '/ashtray/swimmingpool-2.jpg'],
+    images: [swimmingpoolPic1, swimmingpoolPic2],
     text: 'Swimmingpool 510.-',
   },
   {
     name: 'Dalai Puma Ashtrays - Badewanne',
-    images: [
-      '/ashtray/badewanne-1.jpg',
-      '/ashtray/badewanne-2.jpg',
-      '/ashtray/badewanne-3.jpg',
-    ],
+    images: [badewannePic1, badewannePic2, badewannePic3],
     text: 'Badewanne 320.- ',
   },
   {
     name: 'Dalai Puma Ashtrays - Wellesittich',
-    images: [
-      '/ashtray/wellesittich-1.jpg',
-      '/ashtray/wellesittich-2.jpg',
-      '/ashtray/wellesittich-3.jpg',
-    ],
+    images: [wellesittichPic1, wellesittichPic2, wellesittichPic3],
     text: 'Wellesittich 290.- SOLD ',
   },
   {
     name: 'Echsenwolf - Dalai Puma Ashtray',
-    images: ['/ashtray/echsenwolf-1.jpg', '/ashtray/echsenwolf-2.jpg'],
-    text: 'Echsenwolf 290.- SOLD',
+    images: [echsenwolfPic1, echsenwolfPic2],
+    text: 'Echsenwolf 250.-',
   },
   {
     name: 'Dalai Puma Ashtrays - Erdbeeri',
-    images: [
-      '/ashtray/erdbeeri-1.jpg',
-      '/ashtray/erdbeeri-2.jpg',
-      '/ashtray/erdbeeri-3.jpg',
-    ],
+    images: [erdbeeriPic1, erdbeeriPic2, erdbeeriPic3],
     text: 'Erdbeeri 210.-',
   },
 ];
@@ -89,40 +90,39 @@ const Ashtray = () => {
         These nine unique ashtrays were created as a collaboration of Ursula
         Vogel of Goodlifeceramics and Ziska Staubli of Dalai Puma.
       </p>
-      <div
+      <Image
+        src={ashtrayGroupPic}
+        placeholder="blur"
+        alt="Dalai Puma Ashtrays"
         style={{
           width: '100%',
-          display: 'block',
+          height: 'auto',
+
+          marginBottom: 16,
         }}
-      >
-        <Image
-          src="/ashtray/group.jpg"
-          layout="responsive"
-          width={700}
-          height={475}
-          objectFit="contain"
-          alt="Dalai Puma Ashtrays"
-        />
-      </div>
+      />
       <div className="ashtrayGrid">
         {ashtrayData.map((tray) => {
           return (
             <div className="ashtrayContainer" key={tray.name}>
               <swiper-container
-                spaceBetween={50}
+                spaceBetween={0}
                 slidesPerView={1}
                 navigation="true"
               >
                 {tray.images.map((image) => {
                   return (
-                    <swiper-slide key={image} lazy="true">
+                    <swiper-slide key={image}>
                       <Image
                         src={image}
-                        layout="responsive"
                         width={500}
                         height={500}
-                        objectFit="contain"
                         alt={tray.name}
+                        placeholder="blur"
+                        style={{
+                          maxWidth: '100%',
+                          height: 'auto',
+                        }}
                       />
                     </swiper-slide>
                   );
@@ -132,6 +132,7 @@ const Ashtray = () => {
             </div>
           );
         })}
+      <div className="ashtrayContainer" key="extra"></div>
       </div>
 
       <style jsx>{`

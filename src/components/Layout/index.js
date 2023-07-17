@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Header from '../Header';
+import cheetaPic from '../../../public/cheeta.png';
 
 const Layout = ({ children }) => {
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -12,11 +13,11 @@ const Layout = ({ children }) => {
       <div className="bg">
         {pathname !== '/ashtray' ? (
           <Image
-            src="/cheeta.png"
-            layout="fill"
-            objectFit="cover"
+            src={cheetaPic}
+            fill={true}
             alt="Dalai Puma Background"
             className="bg"
+            style={{ objectFit: 'cover' }}
           />
         ) : null}
       </div>

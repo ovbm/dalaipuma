@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 
+import cheetaPic from '../../../public/cheeta.png';
+
 const MobileMenu = forwardRef(({ headerHeight, isMenuOpen }, ref) => {
   const router = useRouter();
   console.log(router.asPath === '/shows');
@@ -12,40 +14,43 @@ const MobileMenu = forwardRef(({ headerHeight, isMenuOpen }, ref) => {
     <div className="mobile-menu" ref={ref}>
       <div className="mobile-menu-bg">
         <Image
-          src="/cheeta.png"
-          layout="fill"
-          objectFit="cover"
+          src={cheetaPic}
+          fill={true}
           alt="Dalai Puma Background"
           className="bg"
+          style={{ objectFit: 'cover' }}
         />
       </div>
       <div className="mobile-menu-content">
-        <Link href="/">
-          <a
-            style={{
-              textDecoration: router.asPath === '/' ? 'underline' : 'none',
-            }}
-          >
-            Home
-          </a>
+        <Link
+          href="/"
+          style={{
+            textDecoration: router.asPath === '/' ? 'underline' : 'none',
+            fontSize: '3em',
+            lineHeight: 1.5,
+          }}
+        >
+          Home
         </Link>
-        <Link href="/shows">
-          <a
-            style={{
-              textDecoration: router.asPath === '/shows' ? 'underline' : 'none',
-            }}
-          >
-            Shows
-          </a>
+        <Link
+          href="/shows"
+          style={{
+            textDecoration: router.asPath === '/shows' ? 'underline' : 'none',
+            fontSize: '3em',
+            lineHeight: 1.5,
+          }}
+        >
+          Shows
         </Link>
-        <Link href="/ashtray">
-          <a
-            style={{
-              textDecoration: router.asPath === '/shows' ? 'underline' : 'none',
-            }}
-          >
-            Ashtray
-          </a>
+        <Link
+          href="/ashtray"
+          style={{
+            textDecoration: router.asPath === '/shows' ? 'underline' : 'none',
+            fontSize: '3em',
+            lineHeight: 1.5,
+          }}
+        >
+          Ashtrays
         </Link>
       </div>
 
@@ -85,10 +90,6 @@ const MobileMenu = forwardRef(({ headerHeight, isMenuOpen }, ref) => {
           padding-bottom: ${headerHeight}px;
           height: 100%;
           width: 100%;
-        }
-        .mobile-menu-content a {
-          font-size: 3em;
-          line-height: 1.5;
         }
       `}</style>
     </div>
