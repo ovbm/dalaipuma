@@ -1,21 +1,24 @@
 import React, { useState, useRef } from 'react';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Header from '../Header';
 
 const Layout = ({ children }) => {
   const [headerHeight, setHeaderHeight] = useState(0);
   const headerRef = useRef(null);
-
+  const { pathname } = useRouter();
   return (
     <>
       <div className="bg">
-        <Image
-          src="/cheeta.png"
-          layout="fill"
-          objectFit="cover"
-          alt="Dalai Puma Background"
-          className="bg"
-        />
+        {pathname !== '/ashtray' ? (
+          <Image
+            src="/cheeta.png"
+            layout="fill"
+            objectFit="cover"
+            alt="Dalai Puma Background"
+            className="bg"
+          />
+        ) : null}
       </div>
       <Header
         headerHeight={headerHeight}
@@ -55,7 +58,10 @@ const Layout = ({ children }) => {
             font-family: 'Gaegu', cursive;
             font-size: 150%;
             text-shadow: 2px 2px black;
-            color: white;
+            color: ${pathname !== '/ashtray' ? 'white' : 'red'};
+          }
+          p {
+            text-shadow: 1px 1px black;
           }
           a {
             color: red;

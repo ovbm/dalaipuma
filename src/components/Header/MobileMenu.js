@@ -38,6 +38,15 @@ const MobileMenu = forwardRef(({ headerHeight, isMenuOpen }, ref) => {
             Shows
           </a>
         </Link>
+        <Link href="/ashtray">
+          <a
+            style={{
+              textDecoration: router.asPath === '/shows' ? 'underline' : 'none',
+            }}
+          >
+            Ashtray
+          </a>
+        </Link>
       </div>
 
       <style jsx>{`

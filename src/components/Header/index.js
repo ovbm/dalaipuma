@@ -44,7 +44,10 @@ const Header = forwardRef(({ headerHeight, setHeaderHeight }, headerRef) => {
           </Link>
 
           <Link href="/shows">
-            <a>Shows</a>
+            <a style={{ marginRight: 24 }}>Shows</a>
+          </Link>
+          <Link href="/ashtray">
+            <a>Ashtray</a>
           </Link>
         </nav>
         <SocialLinks />
