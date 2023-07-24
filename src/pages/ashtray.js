@@ -14,11 +14,13 @@ import guerkliPic2 from '../../public/ashtray/guerkli-2.jpg';
 import guerkliPic3 from '../../public/ashtray/guerkli-3.jpg';
 import ssschlangePic1 from '../../public/ashtray/ssschlange-1.jpg';
 import ssschlangePic2 from '../../public/ashtray/ssschlange-2.jpg';
+import ssschlangePic3 from '../../public/ashtray/ssschlange-3.jpg';
 import zebraPic1 from '../../public/ashtray/zebra-1.jpg';
 import zebraPic2 from '../../public/ashtray/zebra-2.jpg';
 import zebraPic3 from '../../public/ashtray/zebra-3.jpg';
 import swimmingpoolPic1 from '../../public/ashtray/swimmingpool-1.jpg';
 import swimmingpoolPic2 from '../../public/ashtray/swimmingpool-2.jpg';
+import swimmingpoolPic3 from '../../public/ashtray/swimmingpool-3.jpg';
 import badewannePic1 from '../../public/ashtray/badewanne-1.jpg';
 import badewannePic2 from '../../public/ashtray/badewanne-2.jpg';
 import badewannePic3 from '../../public/ashtray/badewanne-3.jpg';
@@ -27,6 +29,7 @@ import wellesittichPic2 from '../../public/ashtray/wellesittich-2.jpg';
 import wellesittichPic3 from '../../public/ashtray/wellesittich-3.jpg';
 import echsenwolfPic1 from '../../public/ashtray/echsenwolf-1.jpg';
 import echsenwolfPic2 from '../../public/ashtray/echsenwolf-2.jpg';
+import echsenwolfPic3 from '../../public/ashtray/echsenwolf-3.jpg';
 import erdbeeriPic1 from '../../public/ashtray/erdbeeri-1.jpg';
 import erdbeeriPic2 from '../../public/ashtray/erdbeeri-2.jpg';
 import erdbeeriPic3 from '../../public/ashtray/erdbeeri-3.jpg';
@@ -46,7 +49,7 @@ const ashtrayData = [
   },
   {
     name: 'Dalai Puma Ashtrays - Ssschlange',
-    images: [ssschlangePic1, ssschlangePic2],
+    images: [ssschlangePic1, ssschlangePic2, ssschlangePic3],
     text: 'Ssschlange 250.-',
   },
   {
@@ -56,7 +59,7 @@ const ashtrayData = [
   },
   {
     name: 'Dalai Puma Ashtrays - Swimmingpool',
-    images: [swimmingpoolPic1, swimmingpoolPic2],
+    images: [swimmingpoolPic1, swimmingpoolPic2, swimmingpoolPic3],
     text: 'Swimmingpool 510.-',
   },
   {
@@ -71,7 +74,7 @@ const ashtrayData = [
   },
   {
     name: 'Echsenwolf - Dalai Puma Ashtray',
-    images: [echsenwolfPic1, echsenwolfPic2],
+    images: [echsenwolfPic1, echsenwolfPic2, echsenwolfPic3],
     text: 'Echsenwolf 250.-',
   },
   {
