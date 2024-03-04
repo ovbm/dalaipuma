@@ -12,6 +12,40 @@ const IndexPage = () => (
       Rhabarber Pop, Barbershop Hop, Indie wRap, Rock Lobster. Raaaa!
     </p>
     <Newsletter />
+    <div className="bandcampGrid">
+      <div className="flexItem">
+        <h2 style={{ textAlign: 'center', backgroundColor: 'red' }}>
+          Ok Wow How?! <span style={{ fontSize: '0.6em' }}>2024</span>
+        </h2>
+        <div className="bandcampContainer">
+          <iframe
+            className="bandcamp"
+            width="300"
+            height="786"
+            title="Ok Wow How?!"
+            loading="lazy"
+            src="https://bandcamp.com/EmbeddedPlayer/album=67764392/size=large/bgcol=333333/linkcol=e99708/tracklist=true/transparent=true/"
+            seamless
+          ></iframe>
+        </div>
+      </div>
+      <div className="flexItem">
+        <h2 style={{ textAlign: 'center', backgroundColor: 'magenta'  }}>
+          Ok Ciao Kakao <span style={{ fontSize: '0.6em' }}>2021</span>
+        </h2>
+        <div className="bandcampContainer">
+          <iframe
+            className="bandcamp"
+            width="300"
+            height="442"
+            title="Ok Ciao Kakao"
+            loading="lazy"
+            src="https://bandcamp.com/EmbeddedPlayer/album=3754664760/size=large/bgcol=333333/linkcol=e99708/tracklist=true/transparent=true/"
+            seamless
+          />
+        </div>
+      </div>
+    </div>
     <div className="videContainer">
       <iframe
         width="560"
@@ -24,127 +58,6 @@ const IndexPage = () => (
         allowFullScreen
       />
     </div>
-    <div className="bandcampGrid">
-      <div className="flexItem">
-        <div className="bandcampContainer">
-          <iframe
-            className="bandcamp"
-            width="300"
-            height="442"
-            title="Ok Ciao Kakao"
-            loading="lazy"
-            src="https://bandcamp.com/EmbeddedPlayer/track=4185740710/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
-            seamless
-          />
-        </div>
-      </div>
-      <div className="flexItem">
-        <div className="bandcampContainer">
-          <iframe
-            className="bandcamp"
-            width="300"
-            height="442"
-            title="Ok Ciao Kakao"
-            loading="lazy"
-            src="https://bandcamp.com/EmbeddedPlayer/track=112895351/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
-            seamless
-          />
-        </div>
-      </div>
-      <div className="flexItem">
-        <div className="bandcampContainer">
-          <iframe
-            className="bandcamp"
-            width="300"
-            height="442"
-            title="Ok Ciao Kakao"
-            loading="lazy"
-            src="https://bandcamp.com/EmbeddedPlayer/album=3754664760/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
-            seamless
-          />
-        </div>
-      </div>
-      <div className="flexItem">
-        <div className="bandcampContainer">
-          <iframe
-            className="bandcamp"
-            width="300"
-            height="442"
-            title="Your Kink Is Not My Kink But Your Kink Is Ok by Dalai Puma"
-            loading="lazy"
-            src="https://bandcamp.com/EmbeddedPlayer/track=1578663658/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
-            seamless
-          />
-        </div>
-      </div>
-      <div className="flexItem">
-        <div className="bandcampContainer">
-          <iframe
-            className="bandcamp"
-            width="300"
-            height="442"
-            title="You don&#39;t know how to Kiss by Dalai Puma"
-            loading="lazy"
-            src="https://bandcamp.com/EmbeddedPlayer/track=197760067/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
-            seamless
-          />
-        </div>
-      </div>
-      <div className="flexItem">
-        <div className="bandcampContainer">
-          <iframe
-            className="bandcamp"
-            width="300"
-            height="442"
-            title="My Bedroom is an Entire Town by Dalai Puma"
-            loading="lazy"
-            src="https://bandcamp.com/EmbeddedPlayer/track=2158678826/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
-            seamless
-          />
-        </div>
-      </div>
-      <div className="flexItem">
-        <div className="bandcampContainer">
-          <iframe
-            className="bandcamp"
-            width="300"
-            height="442"
-            title="Cigarette Day by Dalai Puma"
-            loading="lazy"
-            src="https://bandcamp.com/EmbeddedPlayer/track=588048221/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
-            seamless
-          />
-        </div>
-      </div>
-      <div className="flexItem">
-        <div className="bandcampContainer">
-          <iframe
-            className="bandcamp"
-            width="300"
-            height="442"
-            title="Karma Ping Pong by Dalai Puma"
-            loading="lazy"
-            src="https://bandcamp.com/EmbeddedPlayer/track=2909376046/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
-            seamless
-          />
-        </div>
-      </div>
-      <div className="flexItem">
-        <div className="bandcampContainer">
-          <iframe
-            className="bandcamp"
-            width="300"
-            height="442"
-            title="Leave Your Tribe by Dalai Puma"
-            loading="lazy"
-            src="https://bandcamp.com/EmbeddedPlayer/track=2109071849/size=large/bgcol=333333/linkcol=e99708/tracklist=false/transparent=true/"
-            seamless
-          />
-        </div>
-      </div>
-      <div className="flexItem"></div>
-      <div className="flexItem"></div>
-    </div>
     <style jsx>{`
       .flexItem {
         flex: 1;
@@ -153,8 +66,8 @@ const IndexPage = () => (
         position: relative;
         overflow: hidden;
         width: 100%;
-        min-width: 300px;
-        padding-top: 131%; /* Aspect Ratio */
+        min-width: 320px;
+        padding-top: 161%; /* Aspect Ratio */
         margin: 0;
       }
 
@@ -170,6 +83,7 @@ const IndexPage = () => (
       }
 
       .bandcampGrid {
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
