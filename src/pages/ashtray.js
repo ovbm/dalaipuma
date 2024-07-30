@@ -50,7 +50,7 @@ const ashtrayData = [
   {
     name: 'Dalai Puma Ashtrays - Ssschlange',
     images: [ssschlangePic1, ssschlangePic2, ssschlangePic3],
-    text: 'Ssschlange 250.-',
+    text: 'Ssschlange 250.- SOLD',
   },
   {
     name: 'Dalai Puma Ashtrays - Zebra',
@@ -65,7 +65,7 @@ const ashtrayData = [
   {
     name: 'Dalai Puma Ashtrays - Badewanne',
     images: [badewannePic1, badewannePic2, badewannePic3],
-    text: 'Badewanne 320.- ',
+    text: 'Badewanne 320.- SOLD',
   },
   {
     name: 'Dalai Puma Ashtrays - Wellesittich',
@@ -75,7 +75,7 @@ const ashtrayData = [
   {
     name: 'Echsenwolf - Dalai Puma Ashtray',
     images: [echsenwolfPic1, echsenwolfPic2, echsenwolfPic3],
-    text: 'Echsenwolf 250.-',
+    text: 'Echsenwolf 250.- SOLD',
   },
   {
     name: 'Dalai Puma Ashtrays - Erdbeeri',

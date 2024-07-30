@@ -8,10 +8,10 @@
     "body-scroll-lock": "^4.0.0-beta.0",
     "email-validator": "^2.0.4",
     "jsonp": "^0.2.1",
-    "next": "13",
+    "next": "^13",
     "postcss-nested": "^5.0.6",
-    "react": "18",
-    "react-dom": "18",
+    "react": "^18",
+    "react-dom": "^18",
     "styled-jsx-plugin-postcss": "^4.0.1",
     "swiper": "^10.0.4"
   },
