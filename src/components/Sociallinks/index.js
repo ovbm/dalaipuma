@@ -16,7 +16,7 @@ export default function Sociallink({ between }) {
         </svg>
       </a>
       <a
-        href="mailto:panda@dalaipuma.band"
+        href="mailto:surelymentalload@gmail.com"
         aria-label="send email"
         style={{ paddingTop: 2 }}
       >

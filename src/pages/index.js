@@ -11,6 +11,10 @@ const IndexPage = () => (
     <p className="music">
       Rhabarber Pop, Barbershop Hop, Indie wRap, Rock Lobster. Raaaa!
     </p>
+    <p>
+      Booking:
+      <a href="mailto:surelymentalload@gmail.com" aria-label="send email">Mental Load</a>
+    </p>
     <Newsletter />
     <div className="bandcampGrid">
       <div className="flexItem">
@@ -30,7 +34,7 @@ const IndexPage = () => (
         </div>
       </div>
       <div className="flexItem">
-        <h2 style={{ textAlign: 'center', backgroundColor: 'magenta'  }}>
+        <h2 style={{ textAlign: 'center', backgroundColor: 'magenta' }}>
           Ok Ciao Kakao <span style={{ fontSize: '0.6em' }}>2021</span>
         </h2>
         <div className="bandcampContainer">
