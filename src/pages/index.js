@@ -13,7 +13,7 @@ const IndexPage = () => (
     </p>
     <p>
       Booking:
-      <a href="mailto:surelymentalload@gmail.com" aria-label="send email">Mental Load</a>
+      <a href="mailto:surelymentalload@gmail.com" aria-label="booking email">Mental Load</a>
     </p>
     <Newsletter />
     <div className="bandcampGrid">
